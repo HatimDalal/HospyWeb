@@ -7,21 +7,28 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { RouterModule } from '@angular/router';
+import { DoctorserviceService } from './doctorservice.service';
+import { DoctorComponent } from './doctor/doctor.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent
+    NavBarComponent,
+    DoctorComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    HttpClientModule,
+
     RouterModule.forRoot([
       {path: '', component:NavBarComponent},
+      {path:'Doctors',component:DoctorComponent},
     ])
   ],
-  providers: [],
+  providers: [DoctorserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,23 @@
+<h1>Today's Available doctor's time table:</h1>
+
+<div class="doctors" >
+  <div class="doctortable" >
+
+      <table *ngFor="let dt of result">
+        <tr>
+          <th>Doctor's Name</th>
+          <th>Degree</th>
+          <th>Timings</th>
+        </tr>
+
+        <tr>
+          <td>{{dt.name}}</td>
+          <td>{{dt.degree}}</td>
+          <td>{{dt.time}}</td>
+        </tr>
+      </table>
+
+  </div>
+</div>
+
+
