@@ -1,0 +1,40 @@
+<!-- <h1 class="form-text text-center">Booking Appointment</h1><br>
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-4">
+        <div class="form-group">
+            <label for="id">Appointment Id:</label>
+            <input type="text" class="form-control" placeholder="Fullname">
+        </div> 
+
+        <div class="form-group">
+            <label for="">Firstname:</label>
+            <input type="text" class="form-control" placeholder="Fullname">
+        </div>
+
+        </div>
+        </div>   -->
+
+        <table *ngFor="let dt of Result">
+            <tr>
+              <th>Appointmentid:</th>
+              <th>Fullname:</th>
+              <th>Phone:</th>
+              <th>Email:</th>
+              <th>Age:</th>
+              <th>Appointmentdate:</th>
+              <th>Appointmenttime:</th>             
+            </tr>
+            <tr>
+              <th>{{dt.Appointmentid}}</th>
+              <th>{{dt.Fullname}}</th>
+              <th>{{dt.Phone}}</th>
+              <th>{{dt.Email}}</th>
+              <th>{{dt.Age}}</th>
+              <th>{{dt.Appointmentdate}}</th>
+              <th>{{dt.Appointmenttime}}</th> 
+              </tr>
+          </table>
+        
+        
+
