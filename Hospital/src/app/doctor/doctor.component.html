@@ -1,23 +1,28 @@
-<h1>Today's Available doctor's time table:</h1>
+<h3 id="heading">Today's Available doctor's time table:</h3>
 
-<div class="doctors" >
+<div class="col-md-9 offset-md-1">
   <div class="doctortable" >
 
-      <table *ngFor="let dt of result">
+      <table class="table table-hover" id="table">
+        <thead>
         <tr>
-          <th>Doctor's Name</th>
-          <th>Degree</th>
-          <th>Timings</th>
+          <th  scope="col">Doctor's Name</th>
+          <th  scope="col">Degree</th>
+          <th  scope="col">Timings</th>
         </tr>
-
-        <tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let dt of result">
           <td>{{dt.name}}</td>
           <td>{{dt.degree}}</td>
           <td>{{dt.time}}</td>
         </tr>
+      </tbody>
       </table>
 
   </div>
 </div>
+
+
 
 

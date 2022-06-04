@@ -19,7 +19,7 @@ export class DoctorComponent implements OnInit {
         let dc:doctor={
           name:data[i].name,
           degree:data[i].degree,
-          time:data[i].degree
+          time:data[i].time
         };
         this.result.push(dc);
         console.log(this.result);
