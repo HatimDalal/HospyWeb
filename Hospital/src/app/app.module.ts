@@ -15,6 +15,7 @@ import { SearchDoctorComponent } from './search-doctor/search-doctor.component';
 
 // import {Ng2SearchPipe, Ng2SearchPipeModule} from 'ng2-search-filter';
 import { AddPateintComponent } from './add-pateint/add-pateint.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { AddPateintComponent } from './add-pateint/add-pateint.component';
     BookingAppointmentComponent,
     SearchDoctorComponent,
     BookingAppointmentComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +41,8 @@ import { AddPateintComponent } from './add-pateint/add-pateint.component';
       // {path: '', component:NavBarComponent},
       {path:'Doctors',component:DoctorComponent},
       {path:'Booking',component:BookingAppointmentComponent},
-      {path:'Add-Patient',component:AddPateintComponent}
+      {path:'Add-Patient',component:AddPateintComponent},
+      {path:'',component:HomeComponent}
     ])
   ],
   providers: [BookingService,DoctorserviceService],
