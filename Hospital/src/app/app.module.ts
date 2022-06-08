@@ -40,7 +40,7 @@ import { HomeComponent } from './home/home.component';
     RouterModule.forRoot([
       // {path: '', component:NavBarComponent},
       {path:'Doctors',component:DoctorComponent},
-      {path:'Booking',component:BookingAppointmentComponent},
+      {path:'All-Appointments',component:BookingAppointmentComponent},
       {path:'Add-Patient',component:AddPateintComponent},
       {path:'',component:HomeComponent}
     ])
