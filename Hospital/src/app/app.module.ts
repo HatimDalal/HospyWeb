@@ -13,24 +13,30 @@ import { DoctorComponent } from './doctor/doctor.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BookingAppointmentComponent } from './booking-appointment/booking-appointment.component';
 import { BookingService } from './booking.service';
+import { SearchDoctorComponent } from './search-doctor/search-doctor.component';
+
+// import {Ng2SearchPipe, Ng2SearchPipeModule} from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     DoctorComponent,
-    BookingAppointmentComponent
+    BookingAppointmentComponent,
+    SearchDoctorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
+    // Ng2SearchPipeModule,
+    // Ng2SearchPipe,
 
     RouterModule.forRoot([
-      {path: '', component:NavBarComponent},
+      // {path: '', component:NavBarComponent},
       {path:'Doctors',component:DoctorComponent},
-      {path:'Booking',component:BookingAppointmentComponent}
+      {path:'Booking',component:BookingAppointmentComponent},
     ])
   ],
   providers: [BookingService,DoctorserviceService],

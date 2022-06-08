@@ -14,26 +14,39 @@
 
         </div>
         </div>   -->
+        <div>
+            <!-- <input type="text" name="search" [(ngModel)]="searchText" placeholder="Search by Appointment id"> -->
+            <input 
+            #query
+            (keyup)="filter(query.value)"
+            type="text" class="form-control" placeholder="Search...">
+        </div>
 
-        <table *ngFor="let dt of Result">
-            <tr>
-              <th>Appointmentid:</th>
-              <th>Fullname:</th>
-              <th>Phone:</th>
-              <th>Email:</th>
-              <th>Age:</th>
-              <th>Appointmentdate:</th>
-              <th>Appointmenttime:</th>             
-            </tr>
-            <tr>
-              <th>{{dt.Appointmentid}}</th>
-              <th>{{dt.Fullname}}</th>
-              <th>{{dt.Phone}}</th>
-              <th>{{dt.Email}}</th>
-              <th>{{dt.Age}}</th>
-              <th>{{dt.Appointmentdate}}</th>
-              <th>{{dt.Appointmenttime}}</th> 
-              </tr>
+        <!-- <table *ngFor="let dt of Result" class="table table-stripped"> -->
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Appointmentid:</th>
+                    <th scope="col">Fullname:</th>
+                    <th scope="col">Phone:</th>
+                    <th scope="col">Email:</th>
+                    <th scope="col">Age:</th>
+                    <th scope="col">Appointmentdate:</th>
+                    <th scope="col">Appointmenttime:</th>             
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let p of filteredBooks" scope="row">
+                    <td>{{p.Appointmentid}}</td>
+                    <td>{{p.Fullname}}</td>
+                    <td>{{p.Phone}}</td>
+                    <td>{{p.Email}}</td>
+                    <td>{{p.Age}}</td>
+                    <td>{{p.Appointmentdate}}</td>
+                    <td>{{p.Appointmenttime}}</td> 
+                    <td><button (click)="delete()" class="btn btn-danger" type="button">Delete</button></td>
+                </tr>
+            </tbody>
           </table>
         
         
