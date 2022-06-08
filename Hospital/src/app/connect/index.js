@@ -2,15 +2,8 @@ const express = require("express");
 const bodyparser = require("body-parser");
 const cors = require("cors");
 
-<<<<<<< HEAD
 const db = require("../connect/env");
 const client = require("../connect/env");
-=======
-const db = require('../connect/env');
-const client = require('../connect/env');
-const router = express.Router();
-
->>>>>>> 5838fe95934d6e91c78ac5c3cc322f569d3416ff
 const app = express();
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -39,7 +32,6 @@ db.connect((err) => {
 
 // }
 // );
-<<<<<<< HEAD
 app.get("/Appointment", (req, res) => {
   let qr = `Select * from public."Appointment"`;
   db.query({
@@ -62,37 +54,6 @@ app.get("/Appointment", (req, res) => {
       res.send(data1);
     })
     .catch((err) => console.log(err, "errs"));
-=======
-app.get('/Appointment', (req, res) => {
-    let qr = `Select * from public."Appointment"`
-    db
-        .query({
-            // rowMode: "array",
-            text: qr
-        })
-        .then(result => {
-            
-            var data1 = []; 
-            for (var i = 0; i < result.rows.length; i++) {
-                data1.push({
-                    Appointmentid: result.rows[i].Appointmentid,
-                    Fullname: result.rows[i].Fullname,
-                    Phone: result.rows[i].Phone,
-                    Email: result.rows[i].Email,
-                    Age:result.rows[i].Age,
-                    Appointmentdate:result.rows[i].Appointmentdate,
-                    Appointmenttime:result.rows[i].Appointmenttime
-                    
-                });
-            }
-            res.send(
-              
-                data1
-            );
-            
-        })
-        .catch(err => console.log(err, 'errs'));
->>>>>>> 5838fe95934d6e91c78ac5c3cc322f569d3416ff
 });
 
 //post method
@@ -207,7 +168,6 @@ app.post('/Appointment1',(req,res)=>{
 
 
 app.listen(3000, () => {
-<<<<<<< HEAD
   console.log("Server Running");
 });
 
@@ -276,7 +236,3 @@ app.post("/Bookingnew", (req, res) => {
 // app.listen(3000, () => {
 //   console.log("Server Running");
 // });
-=======
-    console.log('Server Running');
-});
->>>>>>> 5838fe95934d6e91c78ac5c3cc322f569d3416ff
