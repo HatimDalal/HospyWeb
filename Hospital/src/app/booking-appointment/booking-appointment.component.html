@@ -1,21 +1,6 @@
-<!-- <h1 class="form-text text-center">Booking Appointment</h1><br>
-<div class="row">
-    <div class="col-md-1"></div>
-    <div class="col-md-4">
-        <div class="form-group">
-            <label for="id">Appointment Id:</label>
-            <input type="text" class="form-control" placeholder="Fullname">
-        </div> 
-
-        <div class="form-group">
-            <label for="">Firstname:</label>
-            <input type="text" class="form-control" placeholder="Fullname">
-        </div>
-
-        </div>
-        </div>   -->
-
-        <table *ngFor="let dt of Result">
+<div class="class2">
+    <div class="class3">
+        <table style="width:100%" *ngFor="let dt of Result">
             <tr>
               <th>Appointmentid:</th>
               <th>Fullname:</th>
@@ -26,15 +11,29 @@
               <th>Appointmenttime:</th>             
             </tr>
             <tr>
-              <th>{{dt.Appointmentid}}</th>
-              <th>{{dt.Fullname}}</th>
-              <th>{{dt.Phone}}</th>
-              <th>{{dt.Email}}</th>
-              <th>{{dt.Age}}</th>
-              <th>{{dt.Appointmentdate}}</th>
-              <th>{{dt.Appointmenttime}}</th> 
+              <td>{{dt.Appointmentid}}</td>
+              <td>{{dt.Fullname}}</td>
+              <td>{{dt.Phone}}</td>
+              <td>{{dt.Email}}</td>
+              <td>{{dt.Age}}</td>
+              <td>{{dt.Appointmentdate}}</td>
+              <td>{{dt.Appointmenttime}}</td> 
+              </tr>
+              <tr *ngFor="let book of Result; let i = index">
+                <th scope="row">{{book.Appointmentid}}</th>
+                <td>{{book.Fullname}}</td>
+                <td>{{book.Phone}}</td>
+                <td>{{book.Email}}</td>
+                <td>{{book.Appointmentdate}}</td>
+                <td>{{book.Appointmenttime}}</td>
+
+                <td class="text-center">
+                  <button class="btn btn-sm btn-primary" >Edit</button>
+                  <button class="btn btn-sm btn-danger" click="delete(book.Appointmentid.i)">Delete</button>
               </tr>
           </table>
+        </div>
+        </div>   
         
-        
-
+     ///delete 
+     
