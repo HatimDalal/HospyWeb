@@ -60,7 +60,7 @@ app.get("/Appointment", (req, res) => {
 app.post('/Appointment1',(req,res)=>{
 
     console.log(req.body,'createdata');
-   
+
    // let Appointmentid = req.body.Appointmentid;
     // let Fullname = req.body.Fullname;
     // let Phone = req.body.Phone;
@@ -82,9 +82,9 @@ app.post('/Appointment1',(req,res)=>{
     let insertQuery =`insert into public."Appointment"("Fullname","Phone","Email","Age","Appointmentdate","Appointmenttime")
              values('${name}','${phone}','${Email}','${Age}','${Appointmentdate}','${Appointmenttime}')`;
       // console.log(insertQuery,'qr')
-  
+
     //  client.query(insertQuery,(err,result)=>{
-  
+
     //  if(err){console.log (err);}
 
     //  console.log(result,'result');
@@ -93,7 +93,7 @@ app.post('/Appointment1',(req,res)=>{
     //   // //  createdata,
     //   //  result
     //  });
-  
+
 
     client.query(insertQuery, (err, result)=>{
       if(!err){
@@ -103,8 +103,8 @@ app.post('/Appointment1',(req,res)=>{
   });
   client.end;
 });
-    
-    
+
+
   //     console.log(result,'result')
   //     res.send({
   //       message:'data inserted'
@@ -127,7 +127,7 @@ app.post('/Appointment1',(req,res)=>{
 })
   // const deleteappoint = (request, response) => {
   //   const id = parseInt(request.params.Appointmentid)
-  
+
   //   pool.query('DELETE FROM Appointment WHERE Appointmentid = $1', [Appointment], (error, results) => {
   //     if (error) {
   //       throw error
@@ -156,7 +156,7 @@ app.post('/Appointment1',(req,res)=>{
           message:'data updated'
         })
       }else{console.log(err.message)}
-      })     
+      })
     })
 
 
@@ -170,7 +170,7 @@ app.post('/Appointment1',(req,res)=>{
         res.send({
           message:'data deleted'
         } )
-   }); 
+   });
   });
 
 
@@ -191,6 +191,7 @@ app.get("/doctor", (req, res) => {
           name: result.rows[i].name,
           degree: result.rows[i].degree,
           time: result.rows[i].time,
+          exit:result.rows[i].exit
         });
       }
       res.send(data1);
