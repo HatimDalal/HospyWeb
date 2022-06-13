@@ -16,6 +16,11 @@ import { SearchDoctorComponent } from './search-doctor/search-doctor.component';
 // import {Ng2SearchPipe, Ng2SearchPipeModule} from 'ng2-search-filter';
 import { AddPateintComponent } from './add-pateint/add-pateint.component';
 import { HomeComponent } from './home/home.component';
+import { NewAppointmentComponent } from './new-appointment/new-appointment.component';
+import { FooterComponent } from './footer/footer.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { OurServicesComponent } from './our-services/our-services.component';
+import { FreeCheckupComponent } from './free-checkup/free-checkup.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +33,11 @@ import { HomeComponent } from './home/home.component';
     SearchDoctorComponent,
     BookingAppointmentComponent,
     HomeComponent,
+    NewAppointmentComponent,
+    FooterComponent,
+    AboutUsComponent,
+    OurServicesComponent,
+    FreeCheckupComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,7 +52,10 @@ import { HomeComponent } from './home/home.component';
       {path:'Doctors',component:DoctorComponent},
       {path:'All-Appointments',component:BookingAppointmentComponent},
       {path:'Add-Patient',component:AddPateintComponent},
-      {path:'',component:HomeComponent}
+      {path:'',component:HomeComponent},
+      {path:'New-Appointment',component:NewAppointmentComponent},
+      {path:'About-Us',component:AboutUsComponent},
+      {path:'Our-Services',component:OurServicesComponent}
     ])
   ],
   providers: [BookingService,DoctorserviceService],

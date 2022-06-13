@@ -70,11 +70,18 @@ app.post('/Appointment1',(req,res)=>{
     // let Appointmenttime=req.body.Appointmenttime;
     // let Doctor=req.body.Doctor;
     const user = req.body;
-    
+    // console.log(user);
+    const name = user.Fullname;
+    console.log(name);
+    const phone = user.Phone;
+    const Email = user.Email;
+    const Age = user.Age;
+    const Appointmentdate = user.Appointmentdate;
+    const Appointmenttime = user.Appointmenttime;
 
-    let insertQuery =`insert into public."Appointment1"("Fullname","Phone","Email","Age","Appointmentdate","Appointmenttime")
-             values('${user.Fullname}','${user.Phone}','${user.Email}','${user.Age}','${user.Appointmentdate}','${user.Appointmenttime}')`;
-      //console.log(insertQuery,'qr')
+    let insertQuery =`insert into public."Appointment"("Fullname","Phone","Email","Age","Appointmentdate","Appointmenttime")
+             values('${name}','${phone}','${Email}','${Age}','${Appointmentdate}','${Appointmenttime}')`;
+      // console.log(insertQuery,'qr')
   
     //  client.query(insertQuery,(err,result)=>{
   
