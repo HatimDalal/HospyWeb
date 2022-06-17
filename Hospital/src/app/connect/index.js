@@ -81,7 +81,7 @@ app.post('/Appointment1',(req,res)=>{
 
     let insertQuery =`insert into public."Appointment"("Fullname","Phone","Email","Age","Appointmentdate","Appointmenttime")
              values('${name}','${phone}','${Email}','${Age}','${Appointmentdate}','${Appointmenttime}')`;
-      // console.log(insertQuery,'qr')
+      console.log(insertQuery,'qr')
 
     //  client.query(insertQuery,(err,result)=>{
 

@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavBarComponent implements OnInit {
 
+  logosvg :string="assets/images/Calisya.svg";
+
   constructor() { }
 
   ngOnInit(): void {

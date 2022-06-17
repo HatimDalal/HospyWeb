@@ -55,7 +55,8 @@ import { FreeCheckupComponent } from './free-checkup/free-checkup.component';
       {path:'',component:HomeComponent},
       {path:'New-Appointment',component:NewAppointmentComponent},
       {path:'About-Us',component:AboutUsComponent},
-      {path:'Our-Services',component:OurServicesComponent}
+      {path:'Our-Services',component:OurServicesComponent},
+      {path:'Free-Checkup',component:FreeCheckupComponent}
     ])
   ],
   providers: [BookingService,DoctorserviceService],
