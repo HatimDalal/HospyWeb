@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-// import { AddPateintComponent } from './add-pateint/add-pateint.component';
-// import { BookingAppointmentComponent } from './booking-appointment/booking-appointment.component';
+import { AllFreeCheckupsComponent } from './admin/all-free-checkups/all-free-checkups.component';
+import {AuthComponent} from './auth/auth.component';
+import { OnlineConsultComponent } from './online-consult/online-consult.component';
+
 
 const routes: Routes = [
-  // {path:'Booking-Appointment',component:BookingAppointmentComponent},
-  // {path:'Add-Patient',component:AddPateintComponent}
+      {path:'Auth',component:AuthComponent},
+      {path:'Online-Consult',component:OnlineConsultComponent},
+      {path:'All-FreeCheckups',component:AllFreeCheckupsComponent},
 ];
 
 @NgModule({
