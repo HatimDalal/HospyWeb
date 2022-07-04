@@ -19,7 +19,7 @@ export class AllFreeCheckupsComponent implements OnInit {
   filteredCheckups: any;
   subscription: Subscription;
   id:any;
-  displayedColumns: string[] = ['id', 'name', 'email', 'phone'];
+  displayedColumns: string[] = ['id', 'name', 'email', 'phone','date'];
   dataSource:MatTableDataSource<FreeCheckup> = new MatTableDataSource<FreeCheckup>();
 
   @ViewChild(MatPaginator) matPaginator!: MatPaginator;

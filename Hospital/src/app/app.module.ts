@@ -72,6 +72,8 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { AllFreeCheckupsComponent } from './admin/all-free-checkups/all-free-checkups.component';
 import { AllDoctorsComponent } from './admin/all-doctors/all-doctors.component';
+import { NgxCaptchaModule } from "ngx-captcha";
+import{RecaptchaModule} from 'ng-recaptcha'
 
 @NgModule({
   declarations: [
@@ -102,6 +104,7 @@ import { AllDoctorsComponent } from './admin/all-doctors/all-doctors.component';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
+    RecaptchaModule,
     // Add below modules to the imports array 
 
 MatAutocompleteModule,
@@ -140,6 +143,7 @@ MatTooltipModule,
 MatPaginatorModule,
 MatSortModule,
 MatTableModule,
+NgxCaptchaModule,
     
 
     RouterModule.forRoot([

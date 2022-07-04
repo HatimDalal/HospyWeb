@@ -3,8 +3,7 @@
 <div class="class1">
   <div class="row">
     <div class="col-md-1"></div>
-    <div class="col-md-4">
-      <!-- <form (ngSubmit)="idgetter()"> -->
+    <!-- <div class="col-md-4">
         <form action="" novalidate>
         <div class="form-group">
           <label for="Fullname">Fullname:</label>
@@ -50,19 +49,118 @@
           />
         </div>
 
-        <button type="submit" class="btn btn-primary" (click)="idgetter()">
+        <button type="submit" class="btn btn-primary" (click)="idgetter()" (click)="onAdd()">
           Submit Form
         </button>
       </form>
+    </div> -->
+    <div class="row">
+      <div class="col-xs-6">
+        <!-- Student Details -->
+        <form #freeCheckupDetailsForm="ngForm">
+          <div class="row">
+            <div class="col-xs-6">
+              <mat-form-field appearance="outline">
+                <mat-label>Full Name</mat-label>
+                <input
+                  type="text"
+                  matInput
+                  [(ngModel)]="freecheckup.name"
+                  name="name"
+                  required
+                />
+                <mat-error>Fullname is a required field</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-xs-6">
+              <mat-form-field appearance="outline">
+                <mat-label>Email ID</mat-label>
+                <input
+                  type="text"
+                  matInput
+                  [(ngModel)]="freecheckup.email"
+                  name="email"
+                  required
+                />
+                <mat-error>Email is a required field</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+              <mat-form-field appearance="outline">
+                <mat-label>Phone Number</mat-label>
+                <input
+                  type="text"
+                  matInput
+                  [(ngModel)]="freecheckup.phone"
+                  name="phone"
+                  required
+                />
+                <mat-error>Phone number is a required field</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <mat-form-field appearance="outline">
+                <mat-label>Date for Checkup</mat-label>
+                <input
+                  matInput
+                  [matDatepicker]="picker"
+                  [(ngModel)]="freecheckup.date"
+                  name="date"
+                  required
+                />
+                <mat-datepicker-toggle
+                  matSuffix
+                  [for]="picker"
+                ></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+                <mat-error>Date of Appointment is an required field</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="row between-xs">
+                <button
+                  [hidden]="!captcha"
+                  mat-raised-button
+                  color="primary"
+                  [disabled]="!freeCheckupDetailsForm.valid"
+                  #btn
+                  (click)="actionMethod(); btn.disabled = true"
+                  (click)="onAdd()"
+                  (click)="idgetter()"
+                >
+                  Book Check-up
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- <ngx-recaptcha2 #captchaElem>
+            [siteKey]= "6LdEOMEgAAAAANZ1N2HSce54IicHZ7axpSKOnpgO" (reset)=
+            (success)="handleSuccess($event)" [size]="size" [hl]="lang"
+            [theme]="theme" [type]="type" formControlName="recaptcha">
+          </ngx-recaptcha2> -->
+        </form>
+        <div [hidden]="captcha">
+          <re-captcha (resolved)="resolved($event)" siteKey="6LdEOMEgAAAAANZ1N2HSce54IicHZ7axpSKOnpgO"></re-captcha>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-<input class="form-control" type="text" placeholder="{{placeholder}} {{key}}" readonly/>
-
-
-
-
-
+<input
+  class="form-control"
+  type="text"
+  placeholder="{{ placeholder }} {{ key }}"
+  readonly
+/>
+<!-- <form [formGroup]="aFormGroup">
+  
+</form> -->
 
 <!-- 
 <form class="row g-3 needs-validation" novalidate>
@@ -131,4 +229,3 @@
 </form> -->
 
 <!-- <button class="btn btn-primary" (click)="idgetter()">Test</button> -->
-

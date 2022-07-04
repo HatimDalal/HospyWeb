@@ -1,4 +1,4 @@
-export interface FreeCheckup{
+export interface AddFreeCheckupRequest{
     id:  string,
     name: string,
     email: string,
