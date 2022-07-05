@@ -1,5 +1,5 @@
 import { Component, OnInit,NgZone } from '@angular/core';
-import { FormGroup, FormBuilder , Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormBuilder , Validators } from '@angular/forms';
 import { BookingService } from '../booking.service';
 import { ActivatedRoute,Router} from '@angular/router';
 
@@ -10,10 +10,10 @@ import { ActivatedRoute,Router} from '@angular/router';
 })
 export class AddPateintComponent implements OnInit {
   
-  bookingform!:FormGroup;
+  bookingform!:UntypedFormGroup;
   submitted = false;
 
-  constructor(private book:BookingService,private router:Router,private FormBuilder:FormBuilder, private ngZone:NgZone) { }
+  constructor(private book:BookingService,private router:Router,private FormBuilder:UntypedFormBuilder, private ngZone:NgZone) { }
 
   ngOnInit(): void {this.bookingform = this.FormBuilder.group({
     Fullname:['',Validators.required],

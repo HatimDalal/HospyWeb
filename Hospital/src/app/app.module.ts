@@ -70,6 +70,9 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
+// import {MatMomentDateModule} from 'moment';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
+
 import { AllFreeCheckupsComponent } from './admin/all-free-checkups/all-free-checkups.component';
 import { AllDoctorsComponent } from './admin/all-doctors/all-doctors.component';
 import { NgxCaptchaModule } from "ngx-captcha";
@@ -107,6 +110,7 @@ import{RecaptchaModule} from 'ng-recaptcha'
     RecaptchaModule,
     // Add below modules to the imports array 
 
+MatMomentDateModule,
 MatAutocompleteModule,
 MatCheckboxModule,
 MatDatepickerModule,
